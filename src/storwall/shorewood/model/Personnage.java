@@ -1,13 +1,17 @@
 package storwall.shorewood.model;
 
-public  abstract class Personnage {
+public abstract class Personnage {
 
-    private int endurance ;
-    private int force ;
-    private int pointsDeVie;
-    private int x ;
-    private int y ;
+    protected int endurance;
+    protected int force;
+    protected int pointsDeVie;
+    protected int x;
+    protected int y;
 
+
+    public Personnage() {
+
+    }
 
 
     public Personnage(int endurance, int force, int pointsDeVie) {
@@ -15,6 +19,7 @@ public  abstract class Personnage {
         this.force = force;
         this.pointsDeVie = pointsDeVie;
     }
+
 
     public int getEndurance() {
         return endurance;
@@ -27,4 +32,17 @@ public  abstract class Personnage {
     public int getPointsDeVie() {
         return pointsDeVie;
     }
+
+    public int getX() {
+        return x;
+    }
+
+    public int getY() {
+        return y;
+    }
+
+
+    public abstract void frapper(Personnage personnage);
+
+
 }
