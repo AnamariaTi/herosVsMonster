@@ -4,10 +4,10 @@ import storwall.shorewood.model.Personnage;
 
 import java.sql.SQLOutput;
 
-public class Vue  implements InterfaceVue{
+public class Vue implements InterfaceVue {
 
 
-    public  void display () {
+    public void display() {
         System.out.println("------------------------------------");
         System.out.println("------------------------------------");
         System.out.println("Bienvenue dans la forêt de Shorewood");
@@ -16,12 +16,6 @@ public class Vue  implements InterfaceVue{
         System.out.println("------------------------------------");
     }
 
-
-
-    public int CreationPersonage(Personnage p){
-
-        return 0;
-    }
 
 
 

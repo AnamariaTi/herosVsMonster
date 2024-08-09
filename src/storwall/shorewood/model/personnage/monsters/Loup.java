@@ -1,4 +1,10 @@
 package storwall.shorewood.model.personnage.monsters;
 
-public class Loup {
+import storwall.shorewood.model.personnage.Monsters;
+
+public class Loup extends Monsters {
+
+    public Loup() {
+        super("Loup");
+    }
 }

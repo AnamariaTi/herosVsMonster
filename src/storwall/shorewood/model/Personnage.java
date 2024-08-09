@@ -45,4 +45,11 @@ public abstract class Personnage {
     public abstract void frapper(Personnage personnage);
 
 
+    public void position(int x, int y) {
+        this.x = x;
+        this.y = y;
+    }
+
+
+    
 }

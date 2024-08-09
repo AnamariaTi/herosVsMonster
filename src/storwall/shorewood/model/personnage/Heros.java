@@ -5,7 +5,7 @@ import storwall.shorewood.model.De;
 
 public abstract class Heros extends Personnage {
 
-    private String type ;
+    private String type;
 
     public Heros(String type) {
         super();
@@ -19,7 +19,7 @@ public abstract class Heros extends Personnage {
     @Override
     public void frapper(Personnage personnage) {
         De de = new De(4);
-        int degats =de.lanceDe();
+        int degats = de.lanceDe();
 
     }
 
