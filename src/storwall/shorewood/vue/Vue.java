@@ -29,7 +29,7 @@ public class Vue implements InterfaceVue {
 
     public void initCarte() {
         for (int i = 0; i < tailleCart; i++) {
-            for (int j = 0; j < tailleCart; i++) {
+            for (int j = 0; j < tailleCart; j++) {
                 carte[i][j] = ".";
             }
         }
@@ -37,7 +37,7 @@ public class Vue implements InterfaceVue {
 
     public void displayCart() {
         for (int i = 0; i < tailleCart; i++) {
-            for (int j = 0; j < tailleCart; i++) {
+            for (int j = 0; j < tailleCart; j++) {
                 System.out.println(carte[i][j] + " ");
             }
         }
