@@ -44,7 +44,7 @@ public class Vue implements InterfaceVue {
     }
 
 
-    public void displayMessage(String message){
+    public void displayMessage(String message) {
         System.out.println(message);
     }
 
