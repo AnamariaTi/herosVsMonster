@@ -1,5 +1,9 @@
 package storwall.shorewood.model;
 
+import java.lang.reflect.Array;
+
+
+
 public abstract class Personnage {
 
     protected int endurance;
@@ -51,5 +55,36 @@ public abstract class Personnage {
     }
 
 
-    
+    private int caracteristiquePersonnage() {
+        De de = new De(6);
+        int[] lancer = new int[4];
+        for (int i = 0; i < 4; i++) {
+            lancer[i] = de.lanceDe();
+
+        }
+        java.util.Arrays.sort(lancer);
+        return lancer[1] + lancer[2] + lancer[3];
+    }
+
+    private int calculPointsDeVie() {
+        return endurance + change(endurance);
+    }
+
+    public void subirDegats(int degats) {
+        this.pointsDeVie -= degats;
+    }
+
+    public int change(int caracter) {
+        if (caracter < 5) {
+            return -1;
+        }
+        if (caracter < 10) {
+            return 0;
+        }
+        if (caracter < 15) {
+            return +1;
+        }
+        return +2;
+    }
+
 }

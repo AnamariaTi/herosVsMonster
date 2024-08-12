@@ -17,9 +17,10 @@ public abstract class Heros extends Personnage {
 //    }
 
     @Override
-    public void frapper(Personnage personnage) {
+    public void frapper(Personnage perso) {
         De de = new De(4);
-        int degats = de.lanceDe();
+        int degats = de.lanceDe()+change(this.force);
+        perso.subirDegats(degats);
 
     }
 
