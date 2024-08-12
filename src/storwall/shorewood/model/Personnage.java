@@ -66,7 +66,7 @@ public abstract class Personnage {
         return lancer[1] + lancer[2] + lancer[3];
     }
 
-    private int calculPointsDeVie() {
+    protected int calculPointsDeVie() {
         return endurance + change(endurance);
     }
 
@@ -74,7 +74,7 @@ public abstract class Personnage {
         this.pointsDeVie -= degats;
     }
 
-    public int change(int caracter) {
+    protected int change(int caracter) {
         if (caracter < 5) {
             return -1;
         }

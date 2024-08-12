@@ -12,9 +12,9 @@ public abstract class Heros extends Personnage {
         this.type = type;
     }
 
-//    public Heros(int endurance, int force, int pointsDeVie) {
-//        super(endurance, force, pointsDeVie);
-//    }
+    public Heros(int endurance, int force, int pointsDeVie) {
+        super(endurance, force, pointsDeVie);
+    }
 
     @Override
     public void frapper(Personnage perso) {
@@ -28,5 +28,24 @@ public abstract class Heros extends Personnage {
     @Override
     public String toString() {
         return type;
+
+    }
+
+    public class Humain  extends Heros {
+        public Humain() {
+            super("Humain ");
+            this.force +=1;
+            this.endurance +=1 ;
+            this.pointsDeVie  = calculPointsDeVie();
+        }
+    }
+
+    public class Nain extends Heros {
+        public Nain() {
+            super("Nain");
+            this.endurance += 2;
+            this.endurance = calculPointsDeVie();
+        }
     }
 }
+
