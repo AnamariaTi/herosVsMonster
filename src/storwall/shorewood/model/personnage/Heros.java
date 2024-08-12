@@ -19,7 +19,7 @@ public abstract class Heros extends Personnage {
     @Override
     public void frapper(Personnage perso) {
         De de = new De(4);
-        int degats = de.lanceDe()+change(this.force);
+        int degats = de.lanceDe() + change(this.force);
         perso.subirDegats(degats);
 
     }
@@ -31,12 +31,12 @@ public abstract class Heros extends Personnage {
 
     }
 
-    public class Humain  extends Heros {
+    public class Humain extends Heros {
         public Humain() {
             super("Humain ");
-            this.force +=1;
-            this.endurance +=1 ;
-            this.pointsDeVie  = calculPointsDeVie();
+            this.force += 1;
+            this.endurance += 1;
+            this.pointsDeVie = calculPointsDeVie();
         }
     }
 

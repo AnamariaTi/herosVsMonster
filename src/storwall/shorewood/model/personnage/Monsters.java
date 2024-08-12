@@ -34,8 +34,37 @@ public abstract class Monsters extends Personnage {
 
 
     @Override
-    public void frapper(Personnage personnage) {
+    public void frapper(Personnage perso) {
         De de = new De(4);
-        int degats = de.lanceDe();
+        int degats = de.lanceDe() + change(this.force);
+        perso.subirDegats(degats);
     }
+
+
+    public class Loup extends Monsters {
+
+        public Loup() {
+            super("Loup");
+        }
+    }
+
+    public class Orque extends Monsters {
+
+
+        public Orque() {
+            super("Orque");
+            this.force += 1;
+        }
+    }
+
+    public class Dragonnet extends Monsters {
+
+        public Dragonnet() {
+            super("Dragonnet");
+            this.endurance += 1;
+            this.pointsDeVie = calculPointsDeVie();
+        }
+    }
+
+
 }
